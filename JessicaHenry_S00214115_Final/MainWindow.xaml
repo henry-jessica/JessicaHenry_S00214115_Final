@@ -5,15 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JessicaHenry_S00214115_Final"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="WindowLoaded" >
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="80*"/>
         </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Property Listing" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="30"
+               Grid.Row="0"
+               Grid.Column="0"/>
+
+        <ListBox Name="lbxProperties"
+                  Grid.Row="1"
+            Grid.Column="0"
+            Margin="10"
+                     SelectionChanged="lbxProperties_SelectionChanged"/>
     </Grid>
 </Window>

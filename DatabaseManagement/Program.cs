@@ -25,7 +25,7 @@ namespace DatabaseManagement
                     Description = "A modern 1 bedroom apartment located close to the campus." +
     "  The accomodation comprises of 1 en-suite bedroom with a study area, " +
     "a small kitchen and a lounge/dining room",
-                    Location = "Town Centre"
+                    Location = "Town Centre", 
                 };
 
                 RentalProperty p2 = new RentalProperty()

@@ -20,9 +20,20 @@ namespace JessicaHenry_S00214115_Final
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<RentalProperty> allProperties = new List<RentalProperty>();
+        RentalData db = new RentalData();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Properties
+                        select p;
+            allProperties = query.ToList();
+            lbxProperties.ItemsSource = allProperties;
         }
     }
 }
