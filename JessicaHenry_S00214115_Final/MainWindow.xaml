@@ -11,7 +11,8 @@
     <Window.Resources>
         <DataTemplate x:Key="DataTemplatesRental">
             <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding Path=GetPropertiesIcon}"/>
+                <Image Source="{Binding IcontRentalTypeImg}"
+                       Style="{StaticResource smallImageStyleKey}"/>
                 <TextBlock Text="{Binding Location}"/>
                 <TextBlock Text="{Binding Price}" Margin="10 0 0 0"/>
             </StackPanel>

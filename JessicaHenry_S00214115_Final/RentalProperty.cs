@@ -22,6 +22,33 @@ namespace JessicaHenry_S00214115_Final
         public decimal Price { get; set; }
         public string Description { get; set; }
 
+        public string IcontRentalType
+        {
+            get
+            {
+                if (RentalType.GetType().Name == "House")
+                {
+                    return "/Images/flat.png";
+                }
+
+                else if (RentalType.GetType().Name == "Flat")
+                {
+                    return "/Images/flat.png";
+                }
+
+                else if (RentalType.GetType().Name == "Share")
+                {
+                    return "/Images/share.png";
+                }
+                else
+                    return "Type not found";
+
+            }
+           
+        }
+        public string IcontRentalTypeImg { get; set; }
+
+
         //Constructor
 
         //Method 
@@ -62,7 +89,7 @@ namespace JessicaHenry_S00214115_Final
     //Database 
     public class RentalData : DbContext
     {
-        public RentalData() : base("MyFinalExamRentalPropertiesDb") { }
+        public RentalData() : base("MyFinalExamRentalPropertiesDb1055") { }
         public DbSet<RentalProperty> Properties { get; set; }
 
     }
