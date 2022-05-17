@@ -39,6 +39,8 @@
                        x:Name="tbkLocation" 
                        Margin="5"
                        Grid.Row="1"
+            Width="300"
+            Height="50"
                        Grid.Column="1" 
                        HorizontalAlignment="Left" 
                        VerticalAlignment="Top" />
@@ -52,6 +54,8 @@
                        Margin="5"
                        Grid.Row="2"
                        Grid.Column="1" 
+              Width="300"
+            Height="50"
                        HorizontalAlignment="Left" 
                        VerticalAlignment="Top"/>
         <Label Content="Description"
@@ -64,8 +68,10 @@
                        Grid.Row="3"
                        Grid.Column="0"
                        Grid.ColumnSpan="2"
-                       HorizontalAlignment="Left" 
-                       VerticalAlignment="Bottom"/>
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Bottom"
+              Width="600"
+            Height="100"/>
 
         <Button Name="BtnAddRental"
                 Content="Save"

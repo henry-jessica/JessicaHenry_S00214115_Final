@@ -58,20 +58,20 @@ namespace JessicaHenry_S00214115_Final
         }
 
         //Get Icon
-        public string GetPropertiesIcon(string rentalType)
+        public string GetPropertiesIcon()
         {
 
-            if (rentalType == "House")
+            if (RentalType.GetType().Name == "House")
             {
                 return  "/Images/flat.png";
             }
 
-            else if (rentalType == "Flat")
+            else if (RentalType.GetType().Name == "Flat")
             {
                 return "/Images/flat.png";
             }
 
-            else if (rentalType == "Share")
+            else if (RentalType.GetType().Name == "Share")
             {
                 return "/Images/share.png";
             }

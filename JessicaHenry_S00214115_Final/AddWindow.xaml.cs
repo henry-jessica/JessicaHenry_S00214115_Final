@@ -37,20 +37,42 @@ namespace JessicaHenry_S00214115_Final
             string str = cbxRentalType.SelectedItem as string;
             RentalType rentalType = (RentalType)Enum.Parse(typeof(RentalType), str);
 
+
             using (db)
             {
-
                 RentalProperty p1 = new RentalProperty()
                 {
                     Location = tbkLocation.Text,
                     RentalType = rentalType,
                     Description = tbkDescription.Text,
                     Price = Convert.ToDecimal(tbkPrice.Text),
+                    IcontRentalTypeImg = GetPropertiesIcon(rentalType.ToString())
                 };
 
                 db.Properties.Add(p1);
                 db.SaveChanges();
             }
         }
+        public string GetPropertiesIcon(string rentalType)
+        {
+
+            if (rentalType == "House")
+            {
+                return "/Images/flat.png";
+            }
+
+            else if (rentalType == "Flat")
+            {
+                return "/Images/flat.png";
+            }
+
+            else if (rentalType == "Share")
+            {
+                return "/Images/share.png";
+            }
+            else
+                return "Type not found";
+        }
+
     }
 }
