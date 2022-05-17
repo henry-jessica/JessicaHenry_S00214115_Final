@@ -7,7 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Loaded="WindowLoaded" >
+
+    <Window.Resources>
+        <DataTemplate x:Key="DataTemplatesRental">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=GetPropertiesIcon}"/>
+                <TextBlock Text="{Binding Location}"/>
+                <TextBlock Text="{Binding Price}" Margin="10 0 0 0"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    
     <Grid>
+        
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="20*"/>
             <RowDefinition Height="80*"/>
@@ -25,8 +38,10 @@
                Grid.Row="0"
                Grid.Column="0"/>
 
-        <ListBox Name="lbxProperties"
-                  Grid.Row="1"
+        <ListBox 
+             ItemTemplate="{StaticResource DataTemplatesRental}"
+            Name="lbxProperties"
+            Grid.Row="1"
             Grid.Column="0"
             Margin="10"
                      SelectionChanged="lbxProperties_SelectionChanged"/>
@@ -36,5 +51,14 @@
             Grid.Row="1"
             Grid.Column="1"
             Margin="10"/>
+        <Button
+            Name ="BtnAdd"
+            Content="Add" 
+            Grid.Row="1"
+            Grid.Column="3"
+            Height="30"
+            Width="100"
+            VerticalAlignment="Top"
+            Click="Click_Addbtn"/>
     </Grid>
 </Window>
