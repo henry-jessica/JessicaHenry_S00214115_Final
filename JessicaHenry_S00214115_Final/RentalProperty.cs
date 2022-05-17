@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,9 +9,9 @@ namespace JessicaHenry_S00214115_Final
 {
     public enum RentalType
     {
-        house, 
-        flat,
-        share
+        House, 
+        Flat,
+        Share
     }
     public class RentalProperty
     {
@@ -28,6 +29,14 @@ namespace JessicaHenry_S00214115_Final
         {
             return Price + (Price * percentageAmount / 100);
         }
+
+    }
+
+    //Database 
+    public class RentalData : DbContext
+    {
+        public RentalData() : base("MyFinalExamRentalPropertiesDb") { }
+        public DbSet<RentalProperty> Properties { get; set; }
 
     }
 }
