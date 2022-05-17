@@ -29,7 +29,7 @@
                       Grid.Column="1" 
                       HorizontalAlignment="Left"
                       Height="40"
-                      Margin="80 0 0 0" Width="250"/>
+                      Margin="10,24,0,15" Width="250"/>
 
         <Label Content="Location"
                HorizontalAlignment="Center"
@@ -44,7 +44,7 @@
                        Grid.Column="1" 
                        HorizontalAlignment="Left" 
                        VerticalAlignment="Top" />
-       
+
         <Label Content="Price"
                HorizontalAlignment="Center"
                Grid.Row="2"
