@@ -30,6 +30,33 @@ namespace JessicaHenry_S00214115_Final
             return Price + (Price * percentageAmount / 100);
         }
 
+        //Get Icon
+        public string GetPropertiesIcon()
+        {
+
+            if (RentalType.GetType().Name == "House")
+            {
+                return  "/Images/flat.png";
+            }
+
+            else if (RentalType.GetType().Name == "Flat")
+            {
+                return "/Images/flat.png";
+            }
+
+            else if (RentalType.GetType().Name == "Share")
+            {
+                return "/Images/share.png";
+            }
+            else
+                return "Type not found"; 
+        }
+        public override string ToString()
+        {
+            return $"{Location} {Price}"; 
+        }
+
+
     }
 
     //Database 

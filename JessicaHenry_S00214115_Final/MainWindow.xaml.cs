@@ -35,5 +35,16 @@ namespace JessicaHenry_S00214115_Final
             allProperties = query.ToList();
             lbxProperties.ItemsSource = allProperties;
         }
+
+        private void lbxProperties_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RentalProperty selected = lbxProperties.SelectedItem as RentalProperty;
+
+            if (selected != null)
+            {
+                tbxPropertiesDetails.Text = selected.Description;
+             //   imgCar.Source = new BitmapImage(new Uri(selected.Car_Image, UriKind.Relative));
+            }
+        }
     }
 }

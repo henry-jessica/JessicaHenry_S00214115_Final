@@ -30,5 +30,11 @@
             Grid.Column="0"
             Margin="10"
                      SelectionChanged="lbxProperties_SelectionChanged"/>
+
+        <TextBlock
+            Name="tbxPropertiesDetails"
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="10"/>
     </Grid>
 </Window>
