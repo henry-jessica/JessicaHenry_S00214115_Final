@@ -43,13 +43,14 @@ namespace JessicaHenry_S00214115_Final
             if (selected != null)
             {
                 tbxPropertiesDetails.Text = selected.Description;
-             //   imgCar.Source = new BitmapImage(new Uri(selected.Car_Image, UriKind.Relative));
             }
         }
 
         private void Click_Addbtn(object sender, RoutedEventArgs e)
         {
-
+            AddWindow addWindow = new AddWindow();
+            addWindow.Show(); //second window is modal 
+            this.Close();
         }
     }
 }
