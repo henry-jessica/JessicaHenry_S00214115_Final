@@ -23,5 +23,34 @@ namespace JessicaHenry_S00214115_Final
         {
             InitializeComponent();
         }
+
+        private void WindowLoaded(object sender, RoutedEventArgs e)
+        {
+            //Populate combobox
+            cbxRentalType.ItemsSource = new string[] { "Flat", "House", "Share" };
+        }
+
+        private void AddRental_Click(object sender, RoutedEventArgs e)
+        {
+            //Add house to bd 
+            RentalData db = new RentalData();
+            string str = cbxRentalType.SelectedItem as string;
+            RentalType rentalType = (RentalType)Enum.Parse(typeof(RentalType), str);
+
+            using (db)
+            {
+
+                RentalProperty p1 = new RentalProperty()
+                {
+                    Location = tbkLocation.Text,
+                    RentalType = rentalType,
+                    Description = tbkDescription.Text,
+                    Price = Convert.ToDecimal(tbkPrice.Text),
+                };
+
+                db.Properties.Add(p1);
+                db.SaveChanges();
+            }
+        }
     }
 }
