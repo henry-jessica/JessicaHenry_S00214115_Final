@@ -35,7 +35,7 @@
                HorizontalAlignment="Center"
                Grid.Row="1"
                VerticalAlignment="Center"/>
-        <TextBlock 
+        <TextBox 
                        x:Name="tbkLocation" 
                        Margin="5"
                        Grid.Row="1"
@@ -49,7 +49,7 @@
                HorizontalAlignment="Center"
                Grid.Row="2"
                VerticalAlignment="Center"/>
-        <TextBlock 
+        <TextBox  
                        x:Name="tbkPrice" 
                        Margin="5"
                        Grid.Row="2"
@@ -62,7 +62,7 @@
                HorizontalAlignment="Center"
                Grid.Row="3"
                VerticalAlignment="Top"/>
-        <TextBlock 
+        <TextBox  
                        x:Name="tbkDescription" 
                        Margin="5"
                        Grid.Row="3"
