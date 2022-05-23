@@ -60,10 +60,10 @@ namespace DatabaseManagement
                 db.Properties.Add(p3);
 
                 Console.WriteLine("Properties Added to Db");
-
+     //Save db
                 db.SaveChanges();
                 Console.WriteLine("Properties Saved to Database");
-                //Save db
+           
 
                 Console.WriteLine("Press enter to exit");
                 Console.ReadLine();
